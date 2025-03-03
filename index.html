@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phoenix Coder | Rising Through Challenges</title>
+    <!-- <link rel="icon" href="img/person-protection-security-svgrepo-com.svg" /> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+      .progress-ring {
+        position: relative;
+        width: 200px;
+        height: 200px;
+      }
+
+      .progress-ring__circle {
+        transform: rotate(-90deg);
+        transform-origin: 50% 50%;
+        stroke-dasharray: 628 628;
+        transition: stroke-dashoffset 0.5s;
+      }
+
+      .phoenix-path {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 5s linear forwards;
+      }
+
+      @keyframes dash {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      .growth-card {
+        background: rgba(0, 0, 0, 0.3);
+        border-left: 4px solid #f59e0b;
+        transform: scale(0.95);
+        transition: all 0.3s ease;
+      }
+
+      .growth-card:hover {
+        transform: scale(1);
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .mountain-path {
+        clip-path: polygon(0 100%, 100% 100%, 50% 0);
+        background: linear-gradient(to top, #1e3a8a, #3b82f6);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-gray-100 min-h-screen">
+    <!-- Hero Section -->
+    <section class="container mx-auto px-6 py-20 text-center relative">
+      <div class="max-w-2xl mx-auto">
+        <!-- Modified Hero Section with Animated Square Design -->
+        <section class="container mx-auto px-6 py-20 text-center relative">
+          <div class="max-w-2xl mx-auto">
+            <svg class="w-48 h-48 mx-auto mb-8" viewBox="0 0 100 100">
+              <!-- Animated Square Base -->
+              <path
+                class="phoenix-path"
+                d="M20 20 L80 20 L80 80 L20 80 L20 20"
+                fill="none"
+                stroke="#f59e0b"
+                stroke-width="2"
+                stroke-dasharray="1000"
+                stroke-dashoffset="1000">
+                <animate
+                  attributeName="stroke-dashoffset"
+                  from="1000"
+                  to="0"
+                  dur="2s"
+                  fill="freeze" />
+              </path>
+
+              <!-- Rotating Inner Square -->
+              <rect
+                x="30"
+                y="30"
+                width="40"
+                height="40"
+                fill="none"
+                stroke="#f59e0b66"
+                stroke-width="1.5"
+                stroke-dasharray="5">
+                <animateTransform
+                  attributeName="transform"
+                  type="rotate"
+                  from="0 50 50"
+                  to="360 50 50"
+                  dur="8s"
+                  repeatCount="indefinite" />
+              </rect>
+
+              <!-- Profile Picture with Clip Path -->
+              <defs>
+                <clipPath id="squareClip">
+                  <path d="M20 20 L80 20 L80 80 L20 80 Z" />
+                </clipPath>
+              </defs>
+
+              <image
+                href="img/EMON300.jpg"
+                x="15"
+                y="15"
+                width="70"
+                height="70"
+                clip-path="url(#squareClip)"
+                opacity="0">
+                <animate
+                  attributeName="opacity"
+                  from="0"
+                  to="1"
+                  dur="1s"
+                  begin="2s"
+                  fill="freeze" />
+              </image>
+
+              <!-- Animated Corners -->
+              <path d="M20 20 L30 20 L20 30 Z" fill="#f59e0b" opacity="0">
+                <animate
+                  attributeName="opacity"
+                  values="0;1;0"
+                  dur="2s"
+                  repeatCount="indefinite" />
+              </path>
+              <path d="M80 20 L80 30 L70 20 Z" fill="#f59e0b" opacity="0">
+                <animate
+                  attributeName="opacity"
+                  values="0;1;0"
+                  dur="2s"
+                  begin="0.5s"
+                  repeatCount="indefinite" />
+              </path>
+              <path d="M80 80 L70 80 L80 70 Z" fill="#f59e0b" opacity="0">
+                <animate
+                  attributeName="opacity"
+                  values="0;1;0"
+                  dur="2s"
+                  begin="1s"
+                  repeatCount="indefinite" />
+              </path>
+              <path d="M20 80 L20 70 L30 80 Z" fill="#f59e0b" opacity="0">
+                <animate
+                  attributeName="opacity"
+                  values="0;1;0"
+                  dur="2s"
+                  begin="1.5s"
+                  repeatCount="indefinite" />
+              </path>
+            </svg>
+
+            <!-- <h1
+              class="text-4xl font-bold mb-4 bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
+              Rising Through Challenges
+            </h1>
+            <p class="text-lg mb-8"
+              >Physics Student | Persistent Coder | Work in Progress</p> -->
+          </div>
+        </section>
+
+        <!-- <svg class="w-48 h-48 mx-auto mb-8" viewBox="0 0 100 100">
+          <path
+            class="phoenix-path"
+            d="M50 15 L15 50 L35 50 L25 65 L50 50 L75 65 L65 50 L85 50 L50 15"
+            fill="none"
+            stroke="#f59e0b"
+            stroke-width="2" />
+        </svg> -->
+        <h1
+          class="text-4xl font-bold mb-4 bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
+          Rising Through Challenges
+        </h1>
+        <p class="text-lg mb-8"
+          >Physics Student | Persistent Coder | Work in Progress</p
+        >
+      </div>
+    </section>
+
+    <!-- Progress Journey -->
+    <section class="container mx-auto px-6 py-16">
+      <div class="bg-gray-800 rounded-2xl p-8 mb-12">
+        <h2 class="text-3xl font-bold mb-8 text-center">My Learning Journey</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="growth-card p-6 rounded-lg">
+            <div class="text-amber-500 text-3xl mb-4">🪨</div>
+            <h3 class="text-xl font-bold mb-2">Stumbling Blocks</h3>
+            <ul class="text-gray-400 text-sm space-y-2">
+              <li>• Failed Quantum Mechanics Exam</li>
+              <li>• Rejected Research Proposals</li>
+              <li>• Debugging Marathons</li>
+            </ul>
+          </div>
+          <div class="growth-card p-6 rounded-lg">
+            <div class="text-blue-500 text-3xl mb-4">🌱</div>
+            <h3 class="text-xl font-bold mb-2">Lessons Learned</h3>
+            <ul class="text-gray-400 text-sm space-y-2">
+              <li>• Embracing Productive Failure</li>
+              <li>• Incremental Progress > Perfection</li>
+              <li>• Asking for Help is Strength</li>
+            </ul>
+          </div>
+          <div class="growth-card p-6 rounded-lg">
+            <div class="text-green-500 text-3xl mb-4">🏔️</div>
+            <h3 class="text-xl font-bold mb-2">Current Climb</h3>
+            <ul class="text-gray-400 text-sm space-y-2">
+              <li>• Mastering Computational Physics</li>
+              <li>• Building Accessible STEM Tools</li>
+              <li>• Daily Coding Practice</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Progress Visualization -->
+    <section class="container mx-auto px-6 py-16">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold mb-12">Growth Metrics</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="progress-ring mx-auto">
+            <svg viewBox="0 0 200 200">
+              <circle
+                class="progress-ring__circle"
+                stroke="#3b82f6"
+                stroke-width="6"
+                fill="transparent"
+                r="90"
+                cx="100"
+                cy="100"
+                :stroke-dashoffset="628 - (628 * 0.65)" />
+              <text
+                x="50%"
+                y="50%"
+                dominant-baseline="middle"
+                text-anchor="middle"
+                class="text-2xl font-bold fill-current text-blue-400">
+                65%
+              </text>
+            </svg>
+            <p class="mt-2">Physics Mastery</p>
+          </div>
+          <div class="progress-ring mx-auto">
+            <svg viewBox="0 0 200 200">
+              <circle
+                class="progress-ring__circle"
+                stroke="#10b981"
+                stroke-width="6"
+                fill="transparent"
+                r="90"
+                cx="100"
+                cy="100"
+                :stroke-dashoffset="628 - (628 * 0.55)" />
+              <text
+                x="50%"
+                y="50%"
+                dominant-baseline="middle"
+                text-anchor="middle"
+                class="text-2xl font-bold fill-current text-green-400">
+                55%
+              </text>
+            </svg>
+            <p class="mt-2">Coding Skills</p>
+          </div>
+          <div class="progress-ring mx-auto">
+            <svg viewBox="0 0 200 200">
+              <circle
+                class="progress-ring__circle"
+                stroke="#f59e0b"
+                stroke-width="6"
+                fill="transparent"
+                r="90"
+                cx="100"
+                cy="100"
+                :stroke-dashoffset="628 - (628 * 0.85)" />
+              <text
+                x="50%"
+                y="50%"
+                dominant-baseline="middle"
+                text-anchor="middle"
+                class="text-2xl font-bold fill-current text-amber-400">
+                85%
+              </text>
+            </svg>
+            <p class="mt-2">Perseverance</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mountain of Progress -->
+    <section class="container mx-auto px-6 py-16">
+      <div class="mountain-path h-64 rounded-xl relative">
+        <div
+          class="absolute bottom-0 left-1/4 text-sm bg-white bg-opacity-10 p-2 rounded">
+          <div class="text-amber-400">Current Position</div>
+          <div class="text-xs">Learning Data Structures</div>
+        </div>
+        <div
+          class="absolute bottom-1/3 left-1/2 text-sm bg-white bg-opacity-10 p-2 rounded">
+          <div class="text-blue-400">Next Milestone</div>
+          <div class="text-xs">Quantum Computing Basics</div>
+        </div>
+        <div
+          class="absolute top-4 left-3/4 text-sm bg-white bg-opacity-10 p-2 rounded">
+          <div class="text-green-400">Summit Goal</div>
+          <div class="text-xs">Research Publication</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Daily Progress -->
+    <section class="container mx-auto px-6 py-16">
+      <div class="bg-gray-800 rounded-xl p-6">
+        <h3 class="text-xl font-bold mb-4">Today's Progress</h3>
+        <div class="space-y-4">
+          <div class="flex items-center">
+            <div class="w-1/3">Physics Study</div>
+            <div class="w-2/3 bg-gray-700 h-2 rounded-full">
+              <div class="bg-red-500 h-2 rounded-full w-3/4"></div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <div class="w-1/3">Coding Practice</div>
+            <div class="w-2/3 bg-gray-700 h-2 rounded-full">
+              <div class="bg-blue-500 h-2 rounded-full w-1/2"></div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <div class="w-1/3">Self-Care</div>
+            <div class="w-2/3 bg-gray-700 h-2 rounded-full">
+              <div class="bg-green-500 h-2 rounded-full w-2/3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      // Animate progress rings
+
+      gsap.from(".progress-ring__circle", {
+        strokeDashoffset: 628,
+
+        duration: 2,
+
+        ease: "power2.out",
+      });
+
+      // Daily progress animations
+
+      gsap.from(".bg-red-500", { width: 0, duration: 1, delay: 0.6 });
+
+      gsap.from(".bg-blue-500", { width: 0, duration: 1, delay: 0.7 });
+
+      gsap.from(".bg-green-500", { width: 0, duration: 1, delay: 0.9 });
+    </script>
+  </body>
+</html>
